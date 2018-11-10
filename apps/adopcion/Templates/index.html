@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     {%load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="stylesheet" href="{% static "adopcion/fonts/style.css" %}">
 
-    <link rel="stylesheet" href="{%static "adopcion/css/flexboxgrid.css"  %}">
-    <link rel="stylesheet" href="{%static "adopcion/css/Slider.css" %}">
+    <link rel="stylesheet" href="{%static "adopcion/css/flexboxgrid.css" %}">
+    <!-- <link rel="stylesheet" href="{%static "adopcion/css/Slider.css" %}"> -->
     <link rel="stylesheet" href="{%static "adopcion/css/estilo.css" %}">
-    <script  src="{% static "js/jquery-3.3.1.min.js" %}"></script>
-    <script src="js/scripReg.js"></script>
+    <script  src="{% static "adopcion/js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "adopcion/js/scripReg.js" %}"></script>
 
     <title>MisPerris</title>
 </head>
@@ -47,7 +47,7 @@
                     	<a class="prue" href="registrarse.html">Registrarse </a>
                     </li>
                      <li>
-                    	<a class="prue" href="adoptar.html">ADOPTAR </a>
+                    	<a class="prue" href="adoptar">ADOPTAR </a>
                     </li>
                 </ul>
 
@@ -79,7 +79,7 @@
             </section>
 
         </section>
-        <script src="js/slider.js"> </script>
+        <script src="{% static "adopcion/js/slider.js" %}"> </script>
 
         <aside class="row fondosect">
             <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -139,12 +139,12 @@
                     un hogar</p>
                 <br/>
                 <br/>
-                <img src="img/rescate.jpg" alt="perro" width="250" height="125">
+                <img src="{% static "adopcion/rescate.jpg" %}" alt="perro" width="250" height="125">
 
 
             </article>
             <article class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="moverder">
-                <img src="img/crowfunding.jpg" alt="foto" width="250" height="200">
+                <img src="{% static "adopcion/crowfunding.jpg" %}" alt="foto" width="250" height="200">
                 <br/>
                 <H1>CROWFUNDING</H1>
                 <br/>
@@ -161,35 +161,34 @@
 
         </section>
 
-
     </section>
     <div class="row center-xs galerias">
 
         <div class="col-xs-4 col-lg-1 galeria estilo1">
             <a href="#img1">
-                <img src="img/rescatados/Oso.jpg" alt="galeria">
+                <img src="{% static "adopcion/rescatados/Oso.jpg" %}" alt="galeria">
             </a>
             <a href="#img2">
-                <img src="img/rescatados/Maya.jpg" alt="galeria">
+                <img src="{% static "adopcion/rescatados/Maya.jpg" %}" alt="galeria">
             </a>
             <a href="#img3">
-                <img src="img/rescatados/Wifi.jpg" alt="galeria">
+                <img src="{% static "adopcion/rescatados/Wifi.jpg" %}" alt="galeria">
             </a>
         </div>
         <div class="col-xs-4 col-lg-1 galeriaC">
             <a href="#img4">
-                <img src=" img/rescatados/Chocolate.jpg" alt="galeria">
+                <img src="{% static "adopcion/rescatados/Chocolate.jpg" %}" alt="galeria">
             </a>
             <a href="#img5">
-                <img src="img/rescatados/Pexel.jpg" alt="galeria">
+                <img src="{% static "adopcion/rescatados/Pexel.jpg" %}" alt="galeria">
             </a>
         </div>
         <div class="col-xs-4 col-lg-1 galeriaD">
             <a href="#img6">
-                <img src=" img/rescatados/Bigotes.jpg " alt="galeria">
+                <img src="{% static " adopcion/rescatados/Bigotes.jpg" %} " alt="galeria">
             </a>
             <a href="#img7">
-                <img src=" img/rescatados/Luna.jpg" alt="galeria">
+                <img src="{% static "adopcion/rescatados/Luna.jpg" %}" alt="galeria">
             </a>
         </div>
 
@@ -200,7 +199,7 @@
         <div class="imagen">
             <a href="#img6">&#60;</a>
             <a href="#img2">
-                <img src="img/rescatados/Oso.jpg" alt="galeria">
+                <img src="{%static "adopcion/rescatados/Oso.jpg" %}" alt="galeria">
             </a>
             <a href="#img2">></a>
         </div>
@@ -212,7 +211,7 @@
         <div class="imagen">
             <a href="#img1">&#60;</a>
             <a href="#img3">
-                <img src="img/rescatados/Maya.jpg" alt="galeria">
+                <img src="adopcion/rescatados/Maya.jpg" alt="galeria">
             </a>
             <a href="#img3">></a>
         </div>
@@ -224,7 +223,7 @@
         <div class="imagen">
             <a href="#img2">&#60;</a>
             <a href="#img4">
-                <img src="img/rescatados/Wifi.jpg" alt="galeria">
+                <img src="adopcion/rescatados/Wifi.jpg" alt="galeria">
             </a>
             <a href="#img4">></a>
         </div>
@@ -236,7 +235,7 @@
         <div class="imagen">
             <a href="#img3">&#60;</a>
             <a href="#img1">
-                <img src="img/rescatados/Chocolate.jpg" alt="galeria">
+                <img src="{%static "adopcion/rescatados/Chocolate.jpg" %}" alt="galeria">
             </a>
             <a href="#img5">></a>
         </div>
@@ -247,7 +246,7 @@
         <div class="imagen">
             <a href="#img4">&#60;</a>
             <a href="#img6">
-                <img src="img/rescatados/Pexel.jpg" alt="galeria">
+                <img src="adopcion/rescatados/Pexel.jpg" alt="galeria">
             </a>
             <a href="#img6">></a>
         </div>
@@ -258,7 +257,7 @@
         <div class="imagen">
             <a href="#img5">&#60;</a>
             <a href="#img7">
-                <img src=" img/rescatados/Bigotes.jpg" alt="galeria">
+                <img src=" adopcion/rescatados/Bigotes.jpg" alt="galeria">
             </a>
             <a href="#img1">></a>
         </div>
@@ -269,7 +268,7 @@
         <div class="imagen">
             <a href="#img6">&#60;</a>
             <a href="#img1">
-                <img src=" img/rescatados/Luna.jpg" alt="galeria">
+                <img src=" adopcion/rescatados/Luna.jpg" alt="galeria">
             </a>
             <a href="#img1">></a>
         </div>
