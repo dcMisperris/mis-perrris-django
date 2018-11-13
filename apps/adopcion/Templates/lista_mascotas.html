@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <!-- bootstrap -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static "adopcion/css/estilo.css" %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{%static "adopcion/css/flexboxgrid.css" %}">
+    <meta charset="utf-8">
+    <title>MASCOTAS</title>
+  </head>
+  <body>
+      <h1> Lista mascotas</h1>
+
+      <div class="row">
+        <nav class=" col-xs-12 layout_iz" >
+          <li>
+              <ul> Pitbull </ul>
+              <ul> Pastor Aleman </ul>
+          </li>
+        </nav>
+      </div>
+
+      <section class="row eje">
+
+        <p> HOLA </p>
+
+      </section>
+
+    <tbody>
+      {% for mascota in mascotas %}
+      <tr>
+          <td>{{ mascota.nombre}}</td>
+          <td>{{mascota.estado}}</td>
+          <img src="{{ mascota.fotografia.url }}" style= "width:200px" />
+      </tr>
+      {% endfor %}
+    </tbody>
+
+
+
+
+
+  </body>
+</html>

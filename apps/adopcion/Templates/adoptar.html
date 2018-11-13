@@ -4,13 +4,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		{%load static%}
-    <link rel="stylesheet" href="fonts/style.css">
-    <link rel="stylesheet" href="{% static 'css/flexboxgrid.css'%}">
-    <link rel="stylesheet" href="{% static 'css/Slider.css'%}">
-    <link rel="stylesheet" href="{% static 'css/estilo.css'%}">
-    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
-    <script src="{% static 'js/scripReg.js' %}"></script>
-    <script src="{% static 'js/scriptAdop.js' %}"></script>
+    <link rel="stylesheet" href="{% static "adopcion/fonts/style.css" %}">
+    <link rel="stylesheet" href="{% static "adopcion/css/flexboxgrid.css" %}">
+    <!-- <link rel="stylesheet" href="{% static "adopcion/css/Slider.css"%}"> -->
+    <link rel="stylesheet" href="{% static "adopcion/css/estilo.css"%}">
+    <script src="{% static "adopcion/js/jquery-3.3.1.min.js"%}"></script>
+    <script src="{% static "adopcion/js/scripReg.js" %}"></script>
+    <script src="{% static "adopcion/js/scriptAdop.js" %}"></script>
 </head>
 <body>
 	 <section class="container-fluid">
@@ -18,7 +18,7 @@
         <header class="row ">
 
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="fondologo">
-                <img src="img/logo.png" alt="logo">
+                <img src="{% static "adopcion/logo.png" %}" alt="logo">
             </div>
             <nav id="fondonav" class="col-xs-12 col-sm-6 col-md-8 col-lg-8 ">
                 <ul id="menu" class="row center-xs start-md">
@@ -29,19 +29,19 @@
                         <a class="prue" href="#conocenos">quienes somos </a>
                     </li>
                     <li>
-                        <a class="prue" href="index.html">servicios </a>
+                        <a class="prue" href="index">servicios </a>
                     </li>
                     <li>
                         <a class="prue" href="#registro">contactanos </a>
                     </li>
                     <li>
-                    	<a class="prue" href="iniciosesion.html">Iniciar Sesion </a>
+                    	<a class="prue" href="sesion">Iniciar Sesion </a>
                     </li>
                     <li>
-                    	<a class="prue" href="registrarse.html">Registrarse </a>
+                    	<a class="prue" href="registro">Registrarse </a>
                     </li>
                      <li>
-                    	<a class="prue" href="adoptar.html">ADOPTAR </a>
+                    	<a class="prue" href="adoptar">ADOPTAR </a>
                     </li>
 
                 </ul>
@@ -50,7 +50,10 @@
         </header>
 
          <div class="wrap">
-		<h1>Escoge un perro</h1>
+		<div class="row col-xs-12 titulo2p">
+					<h1>Escoge un perro</h1>
+		</div>
+
 		<div class="adoptar-wrapper">
 			<div class="category_list">
 				<a href="#" class="category_item" category="all">Todo</a>
@@ -60,13 +63,13 @@
 				<a href="#" class="category_item" category="Bulldog">Bulldog</a>
 				<a href="#" class="category_item" category="Poodle">Poodle</a>
 			</div>
-			{% load static %}
+			<!-- {% load static %} -->
 			<section class="products-list">
-					{% for obj in object_list %}
-
-					<img src='{{obj.fotografia}}' alt="">
-
+				<tbody>
+					{% for mascota in mascotas %}
+							<img src="{{ mascota.fotografia.url }}" style= "width:200px;height:200px" />
 					{% endfor %}
+				</tbody>
 			</section>
 		</div>
 	</div>

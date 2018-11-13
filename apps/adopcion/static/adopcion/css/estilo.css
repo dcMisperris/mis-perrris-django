@@ -5,16 +5,16 @@
 }
 
 #fondologo{
-    
+
     background: rgb(53, 185, 146);
-    
-  
+
+
 }
 #fondonav{
-    
-    background: rgb(53, 185, 146);
-    
-    
+
+        background: rgb(53, 185, 146); 
+
+
 }
 .textoPlomo{
     color:rgb(133, 130, 130);
@@ -30,30 +30,30 @@
     list-style-type: none;
     margin:0;
     text-align: center;
-    
+
 }
 #menu li{
     display: inline;
-   
+
 }
 #menu li a{
-    
+
     color: white;
     font-size: 15px;
     text-decoration: none;
     margin-right: 44px;
     margin-left: 44px;
     font-family: arial;
-    padding: 20px;   
+    padding: 20px;
     display: block;
 }
 
 .circulo{
-  
+
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
     border-radius: 50%;
-    
+
     background-color: white;
 }
 .contacto{
@@ -62,7 +62,7 @@
     margin:0;
     padding:0;
     text-align: center;
-    
+
 }
 .contacto li{
  float: left;
@@ -75,7 +75,7 @@
     padding: 14px 16px;
     border-radius: 10%;
     text-align: center;
-    font-family: arial;  
+    font-family: arial;
     font-size: 20px;
 }
 
@@ -86,7 +86,7 @@
     padding:0;
     text-align: center;
 
-    
+
 }
 #icons li{
     display: inline;
@@ -98,13 +98,13 @@
     color: rgb(39, 168, 130);
     display: inline-block;
     text-decoration: none;
-    padding: 14px 16px;  
+    padding: 14px 16px;
 }
 
 .imag{
     background: rgb(39, 168, 130);
     padding: 15px;
-    
+
 }
 .fondosect{
     background: rgb(39, 168, 130);
@@ -112,7 +112,7 @@
 
 }
 #fondo{
-    
+
     width: 700px;
     height: 400px;
 }
@@ -134,11 +134,11 @@
 #piedepaguina{
 
     background-color: rgba(67, 68, 68, 0.404);
-    
+
     padding-bottom: 30px;
    }
 
- 
+
    #moverisq{
     width: 100%;
     text-align: right;
@@ -151,11 +151,11 @@
     text-align: left;
     padding-top: 30px;
     padding: 10px;
-    
+
    }
 
    /* Contenedor de slider*/
- 
+
    .contenedor-slider {
     margin: auto;
     width: 85% ;
@@ -164,22 +164,22 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   .slider {
     display: flex;
     width: 300%;
   }
-  
+
   .slider__section {
     width: 100%;
   }
-  
+
   .slider__img {
     display: block;
     width: 100%;
     height: 100%;
   }
-  
+
   .btn-prev, .btn-next {
     width: 40px;
     height: 40px;
@@ -187,7 +187,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    line-height: 40px;  
+    line-height: 40px;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -195,19 +195,19 @@
     font-family: monospace;
     cursor: pointer;
   }
-  
+
   .btn-prev:hover, .btn-next:hover {
     background: white;
   }
-  
+
   .btn-prev {
     left: 10px;
   }
-  
+
   .btn-next {
     right: 10px;
   }
-  
+
 
   /* Fin de Slider*/
   #TextoCodigo {
@@ -229,16 +229,16 @@
     display: inline-block;
     text-decoration: none;
     padding: 14px 16px;
-    
-    font-family: arial;  
+
+    font-family: arial;
 }
 
 registro {
     position: relative;
-    
+
     margin: 50px auto 100px auto;
   }
-  
+
 reg{
     background: rgb(39, 168, 130);
     border-radius: 0px;
@@ -254,14 +254,14 @@ boton{
     background: rgb(39, 168, 130);
     text-align: center;
     padding: 10%;
-    
+
 }
 .diseños{
-    
+
   font-size: 0.875em;
   width: 300px;
   height: 35px;
-  
+
 }
 
 .diseñolabel {
@@ -288,12 +288,13 @@ button{
     padding-right: 0;
     justify-content: space-around;
     padding-top: 10px;
+    flex: auto;
 }
 
 .galeria img {
     width: 120px;
     height: auto;
-    
+
 }
 .galeriaC{
     list-style: none;
@@ -333,7 +334,7 @@ button{
 }
 
 .modal:target {
-    
+
     display: block;
     position: fixed;
     background: rgba(0,0,0,0.8);
@@ -353,7 +354,7 @@ button{
 .imagen {
     width: 100%;
     height: 50%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,7 +377,7 @@ button{
     width: 500px;
     height: 100%;
     max-width: 100%;
-    
+
     border: 7px solid #fff;
     box-sizing: border-box;
 }
@@ -483,4 +484,23 @@ button{
     color: #fff;
     text-align: center;
     text-decoration: none;
+}
+
+
+.layout_iz{
+  margin: 200px auto;
+  width: 150px;
+  height: auto;
+  background-color: #ff9400;
+  font-family: sans-serif;
+  font-style: oblique;
+
+}
+
+.eje{
+
+  margin: 200px;
+  background-color:black;
+  padding: 300px;
+  border: 30px;
 }

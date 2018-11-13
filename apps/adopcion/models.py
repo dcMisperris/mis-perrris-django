@@ -4,7 +4,7 @@ from django.db import models
 
 class Mascota(models.Model):
     OPCIONES_ESTADO = (('Rescatado','Rescatado'),('Disponible','Disponible'),('Adoptado','Adoptado'),)
-    fotografia = models.ImageField(upload_to = "static/img/")
+    fotografia = models.ImageField(default='default.jpg',blank = True)
     nombre = models.CharField(max_length = 30)
     raza_predominante = models.CharField(max_length = 50)
     descripcion = models.TextField()
