@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{%load static%}
+    <link rel="stylesheet" href="{% static "adopcion/fonts/style.css" %}">
+    <link rel="stylesheet" href="{% static "adopcion/css/flexboxgrid.css" %}">
+    <!-- <link rel="stylesheet" href="{% static "adopcion/css/Slider.css"%}"> -->
+    <link rel="stylesheet" href="{% static "adopcion/css/estilo.css"%}">
+    <script src="{% static "adopcion/js/jquery-3.3.1.min.js"%}"></script>
+
+
+</head>
+<body>
+	 <section class="container-fluid">
+
+        <header class="row ">
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="fondologo">
+                <img src="{% static "adopcion/logo.png" %}" alt="logo">
+            </div>
+            <nav id="fondonav" class="col-xs-12 col-sm-6 col-md-8 col-lg-8 ">
+                <ul id="menu" class="row center-xs start-md">
+                    <li>
+                        <a class="prue" href="#">inicio </a>
+                    </li>
+                    <li>
+                        <a class="prue" href="#conocenos">quienes somos </a>
+                    </li>
+                    <li>
+                        <a class="prue" href="index">servicios </a>
+                    </li>
+                    <li>
+                        <a class="prue" href="#registro">contactanos </a>
+                    </li>
+                    <li>
+                    	<a class="prue" href="sesion">Iniciar Sesion </a>
+                    </li>
+                    <li>
+                    	<a class="prue" href="registro">Registrarse </a>
+                    </li>
+                     <li>
+                    	<a class="prue" href="adoptar">Adoptar</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+         <div class="wrap">
+		<div class="row col-xs-12 titulo2p">
+					<h1>Escoge un perro</h1>
+		</div>
+
+		<div class="adoptar-wrapper">
+			<div class="category_list">
+				<a href="adoptar" class="category_item" category="all">Todo</a>
+				<a href="pitbulls" class="category_item" category="Pitbull">Pitbull</a>
+				<a href="/../pastores" class="category_item" category="Pastor Aleman">Pastor Aleman</a>
+				<a href="/../chihuahuas" class="category_item" category="Chiwawa">Chiwawa</a>
+				<a href="#" class="category_item" category="Bulldog">Bulldog</a>
+				<a href="#" class="category_item" category="Poodle">Poodle</a>
+			</div>
+			<!-- {% load static %} -->
+			<section class="products-list">
+				<tbody>
+					{% for mascota in mascotas %}
+							<img src="{{ mascota.fotografia.url }}" style= "width:200px;height:200px" />
+					{% endfor %}
+				</tbody>
+			</section>
+		</div>
+	</div>
+
+
+
+
+        <aside class="row fondosect">
+            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <ul class="row center-xs start-md contacto">
+                    <li>
+                        <a href="#">+56967268185 </a>
+                    </li>
+
+
+                </ul>
+            </section>
+
+            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <ul class="row center-xs start-md contacto">
+                    <li>
+                        <a href="#">Rescate y adopcion de perros callejeros</a>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+                <ul class="row center-xs end-md" id="icons">
+
+                    <li class="circulo">
+                        <a class="icon-facebook" href="https://www.facebook.com/"> </a>
+                    </li>
+                    <li class="circulo">
+                        <a class="icon-google" href="#"></a>
+                    </li>
+                    <li class="circulo">
+                        <a class="icon-instagram" href="https://www.instagram.com/?hl=es-la"></a>
+                    </li>
+                    <li class="circulo">
+                        <a class="icon-mail3" href="https://www.instagram.com/?hl=es-la"></a>
+                    </li>
+                </ul>
+            </section>
+            <br/>
+            <br/>
+        </aside>
+
+        </section>
+
+</body>
+</html>

@@ -19,6 +19,15 @@ def sesion(request):
 
 def lista_perros(request):
     mascota= Mascota.objects.filter(estado = 'Disponible')
-
     contexto = {'mascotas':mascota}
     return render(request,'lista_mascotas.html',contexto)
+
+def mascotas_pitbull(request):
+    mascota = Mascota.objects.filter(raza_predominante = 'Pitbull')
+    contexto = {'mascotas':mascota}
+    return render(request,'pitbulls.html',contexto)
+
+def mascotas_pastores(request):
+    mascota = Mascota.objects.filter(raza_predominante = 'pastor aleman')
+    contexto = {'mascotas':mascota}
+    return render(request,'pastores.html',contexto)
