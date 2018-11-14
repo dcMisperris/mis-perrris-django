@@ -22,7 +22,7 @@ urlpatterns = [
     path('adoptar/',include('apps.adopcion.urls')),
     path('registro/',include('apps.adopcion.urls')),
     path('sesion/',include('apps.adopcion.urls')),
-    path('lista_perros/',include('apps.adopcion.urls')),
+
     path('pitbulls/',include('apps.adopcion.urls')),
     path('pastores/',include('apps.adopcion.urls')),
 ]
