@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Mascota
+from rest_framework import viewsets
+from .serializers import MascotaSerializer
 
 # Create your views here.
 def index(request):
@@ -31,3 +33,9 @@ def mascotas_pastores(request):
     mascota = Mascota.objects.filter(raza_predominante = 'pastor aleman')
     contexto = {'mascotas':mascota}
     return render(request,'pastores.html',contexto)
+
+    ## rest_framework
+
+class MascotaView(viewsets.ModelViewSet):
+    queryset = Mascota.objects.all()
+    serializer_class = MascotaSerializer

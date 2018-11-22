@@ -15,14 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url, include
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('apps.adopcion.urls')),
+    path('index/',include('apps.adopcion.urls')),
     path('adoptar/',include('apps.adopcion.urls')),
     path('registro/',include('apps.adopcion.urls')),
     path('sesion/',include('apps.adopcion.urls')),
-
     path('pitbulls/',include('apps.adopcion.urls')),
     path('pastores/',include('apps.adopcion.urls')),
+    url('', include('apps.adopcion.urls')),
+
 ]
