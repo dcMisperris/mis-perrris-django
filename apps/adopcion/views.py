@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Mascota
-from rest_framework import viewsets
-from .serializers import MascotaSerializer
+
 
 # Create your views here.
 def index(request):
@@ -19,10 +18,11 @@ def registro(request):
 def sesion(request):
     return render(request,'iniciarsesion.html',{})
 
-def lista_perros(request):
+def lista_mascotas(request):
     mascota= Mascota.objects.filter(estado = 'Disponible')
     contexto = {'mascotas':mascota}
-    return render(request,'fotosperros.html',contexto)
+
+    return render(request,'lista_mascotas.html',contexto)
 
 def mascotas_pitbull(request):
     mascota = Mascota.objects.filter(raza_predominante = 'Pitbull')
@@ -35,7 +35,3 @@ def mascotas_pastores(request):
     return render(request,'pastores.html',contexto)
 
     ## rest_framework
-
-class MascotaView(viewsets.ModelViewSet):
-    queryset = Mascota.objects.all()
-    serializer_class = MascotaSerializer

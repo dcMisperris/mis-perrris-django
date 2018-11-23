@@ -2,11 +2,8 @@ from django.urls import path,include
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
-from rest_framework import routers
 
 
-router = routers.DefaultRouter()
-router.register('mascota', views.MascotaView)
 
 urlpatterns = [
     path('index/',views.index,name='index'),
@@ -15,8 +12,7 @@ urlpatterns = [
     path('sesion/',views.sesion,name='sesion'),
     path('pitbulls/',views.mascotas_pitbull,name='pitbulls'),
     path('pastores/',views.mascotas_pastores,name='pastores'),
-    path('',include(router.urls))
-
+    path('lista_mascotas/',views.lista_mascotas,name='lista_mascotas'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

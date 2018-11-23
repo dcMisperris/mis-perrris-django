@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.adopcion',
     'rest_framework',
 
+
 ]
 
 MIDDLEWARE = [
@@ -131,7 +132,28 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    #'DEFAUL_PERMISSION_CLASSES' : ('rest_framework.permissions.IsAuthenticated',),
+    #'DEFAUL_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',),
 }
+
+
+AUTHENTIFICATION_BACKENDS=(
+    'social.backends.facebook.FacebookAppOAuth2'
+    'social.backends.facebook.FacebookOAuth2'
+    'social.backends.twitter.TwitterOAuth2'
+    'django.contrib.auth.backends.ModelBackend',
+    )
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL='/'
+
+SOCIAL_AUTH_TWITTER_KEY = ''
+SOCIAL_AUTH_TWITTER_SECRET = ''
+
+SOCIAL_AUTH_FACEBOOK_KEY = ''
+SOCIAL_AUTH_FACEBOOK_SECRET = ''
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'

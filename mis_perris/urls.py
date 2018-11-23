@@ -27,6 +27,7 @@ urlpatterns = [
     path('sesion/',include('apps.adopcion.urls')),
     path('pitbulls/',include('apps.adopcion.urls')),
     path('pastores/',include('apps.adopcion.urls')),
-    url('', include('apps.adopcion.urls')),
+    path('', include('apps.adopcion.urls')),
+
 
 ]
