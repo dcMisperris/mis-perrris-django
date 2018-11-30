@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url, include
 
+from api.views import PersonaAPIView,MascotaAPIView
+from apps.adopcion.views import test,home
 
 
 urlpatterns = [
@@ -28,6 +30,12 @@ urlpatterns = [
     path('pitbulls/',include('apps.adopcion.urls')),
     path('pastores/',include('apps.adopcion.urls')),
     path('', include('apps.adopcion.urls')),
+    url(r'^api/persona/',PersonaAPIView.as_view()),
+    url(r'^api/mascota/',MascotaAPIView.as_view()),
+    #path('test/',include('apps.adopcion.urls')),
+    url(r'^test/', test),
+    url(r'^home/',home),
+
 
 
 ]

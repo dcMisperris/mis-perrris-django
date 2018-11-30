@@ -8,9 +8,9 @@ class Persona(models.Model):
     mail = models.EmailField(null = 'false')
     passwd = models.CharField(max_length = 40, null = 'false')
     img_persona = models.ImageField(default='default.jpg',blank= True)
-
     def __str__(self):
         return self.nombre
+
 
 class Mascota(models.Model):
     OPCIONES_ESTADO = (('Rescatado','Rescatado'),('Disponible','Disponible'),('Adoptado','Adoptado'),)
