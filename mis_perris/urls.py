@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^api/persona/',PersonaAPIView.as_view()),
     url(r'^api/mascota/',MascotaAPIView.as_view()),
     #path('test/',include('apps.adopcion.urls')),
-    url(r'^test/', test),
+    url(r'^test/',test),
     url(r'^home/',home),
 
 

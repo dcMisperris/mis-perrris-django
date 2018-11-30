@@ -3,7 +3,7 @@ var container = document.getElementById("content_ex")
 var url = 'http://127.0.0.1:8000/api/persona/'
 
 $.ajax({
-  method: 'GET',
+  method:'GET',
   url: url,
   success: function(data){
       console.log(data)

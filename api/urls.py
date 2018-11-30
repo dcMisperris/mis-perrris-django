@@ -4,7 +4,7 @@ from django.urls import path,include
 
 urlpatterns = {
 
-    path(r'^$',PersonaAPIView.as_view(), name ='persona-api')
-    path(r'^mascota/',MascotaAPIView.as_view(), name='mascota-api')
+    path(r'^$',PersonaAPIView.as_view(), name ='persona-api'),
+    path(r'^mascota/',MascotaAPIView.as_view(), name='mascota-api'),
 
 }
