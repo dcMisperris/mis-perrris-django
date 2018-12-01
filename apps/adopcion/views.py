@@ -1,21 +1,10 @@
 from django.shortcuts import render
-from .models import Mascota, Persona
+from .models import Mascota
 from django.http import JsonResponse
 
 
-
-# Create your views here.
-def test(request):
-    persona = Persona.objects.all()
-    context = {
-        'mail' : 'some title here',
-        'passwd' : 'password count'
-    }
-    return JsonResponse(context)
-
-
 def home(request):
-    return render(request,'adopcion/test.html',{})
+    return render(request,'adopcion/test.html')
 
 def index(request):
     return render(request,'adopcion/index.html',{})

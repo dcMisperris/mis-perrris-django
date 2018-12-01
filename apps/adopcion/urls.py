@@ -13,7 +13,8 @@ urlpatterns = [
     path('pitbulls/',views.mascotas_pitbull,name='pitbulls'),
     path('pastores/',views.mascotas_pastores,name='pastores'),
     path('lista_mascotas/',views.lista_mascotas,name='lista_mascotas'),
-    path('test/',views.test, name='test'),
+    #path('persona_lista/',views.persona_list, name='persona_list'),
+    path('home/',views.home, name='home'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

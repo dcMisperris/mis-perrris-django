@@ -1,36 +1,19 @@
-var btn = document.getElementById("btn")
-var container = document.getElementById("content_ex")
-var url = 'http://127.0.0.1:8000/api/persona/'
+$('.apireq').click( function(){
 
-$.ajax({
-  method:'GET',
-  url: url,
-  success: function(data){
-      console.log(data)
-      console.log("success")
-  },
-  error: function(error_data){
-      console.log("error")
-  }
+  $.ajax({
+            url : "http://127.0.0.1:8000/api/persona/",
+            datatype: "json",
+            success: function(data){
+                    $('#id').text( data[0].id);
+                    $('#nombre').text( data[0].nombre);
+                    $('#rut').text( data[0].rut);
+                    $('#mail').text( data[0].mail);
+                    $('#passwd').text( data[0].passwd);
+                    $('#img_persona').text( data[0].img_persona);
+            }   
 
-})
 
-btn.addEventListener("click", function(){
-    var ourRequest = new XMLHttpRequest();
-    ourRequest.open("GET",url);
-    ourRequest.onload = function(){
-        var ourData = JSON.parse(ourRequest.responseText);
-        renderHTML(ourData);
-    }
-    ourRequest.send();
-})
 
-function renderHTML(data){
-    var container = document.getElementById("content_ex")
-    var htmlString = "";
+  });
 
-    for(i=0; i< data.length; i++){
-        htmlString = "<p> su mail es : " + data[i].pk + "</p>";
-    }
-    container.insertAdjacentHTML('beforeend',htmlString);
-}
+});

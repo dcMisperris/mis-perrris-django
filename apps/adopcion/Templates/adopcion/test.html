@@ -1,22 +1,26 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static "adopcion/css/estilos.css" %}">
+     <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
     <title> Test DJANGO AJAX</title>
   </head>
   <body>
-    <button id="btn" > submit </button>
-    <div class="container" id="content_ex">
-      <p>    </p>
+    <button class="apireq">Click me</button>
+    <div id="contenedor" style="margin-top: 100px">
+      <p><label>Id :</label> <span id="id"></span></p>
+      <p><label>Nombre :</label> <span id="nombre"></span></p>
+      <p><label>Rut :</label> <span id="rut"></span></p>
+      <p><label>Mail :</label> <span id="mail"></span></p>
+      <p><label>Contraseña :</label> <span id="passwd"></span></p>
+      <p><label>imagen :</label> <span id="img_persona"></span></p>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src = "{% static "adopcion/js/main.js" %}"></script>
+   
+    <script type="text/javascript" src="{% static 'adopcion/js/main.js' %}"></script>
   </body>
 
 
