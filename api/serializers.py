@@ -12,4 +12,4 @@ class PersonaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Persona
         fields = '__all__'
-        read_only_fields = ['pk', 'nombre', 'passwd','rut']
+        read_only_fields = ['id', 'nombre', 'passwd','rut','img_persona']
