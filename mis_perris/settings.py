@@ -38,9 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    #'django_extensions',
-    #'social_django',
-    #'socialaccount',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -53,9 +50,6 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-
-SOCIAL_AUTH_FACEBOOK_KEY = 'key'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'key'
 
 ACCOUNT_EMAIL_VERIFICATION = "none"
 SOCIALACCOUNT_PROVIDERS = {
@@ -194,12 +188,12 @@ AUTHENTIFICATION_BACKENDS=(
     'django.contrib.auth.backends.ModelBackend',
     )
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL='/'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL='http://localhost:8000/sesion'
 
 SOCIAL_AUTH_TWITTER_KEY = ''
 SOCIAL_AUTH_TWITTER_SECRET = ''
 
-SOCIAL_AUTH_FACEBOOK_KEY = ''
-SOCIAL_AUTH_FACEBOOK_SECRET = ''
+SOCIAL_AUTH_FACEBOOK_KEY = 'key'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'key'
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'

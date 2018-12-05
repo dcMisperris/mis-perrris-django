@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url, include
-
 from api.views import PersonaAPIView,MascotaAPIView
 from apps.adopcion.views import home
 
@@ -35,7 +34,7 @@ urlpatterns = [
     #path('test/',include('apps.adopcion.urls')),
     #url(r'^lista_persona/',persona_list),
     url(r'^home/',home),
-    path('accounts/', include('allauth.urls'))
+    path('accounts/', include('allauth.urls'),)
 
 
 

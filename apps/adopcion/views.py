@@ -37,4 +37,4 @@ def mascotas_pastores(request):
     contexto = {'mascotas':mascota}
     return render(request,'adopcion/pastores.html',contexto)
 
-    ## rest_framework
+

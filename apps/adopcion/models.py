@@ -12,7 +12,7 @@ class Persona(models.Model):
 
     def __str__(self):
         return self.nombre
-
+    @receiver(user_signed_up)
     def create_user_profile(request, user, **kwargs):
         profile = Persona.objects.create(user=user)
         profile.save()

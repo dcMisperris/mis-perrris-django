@@ -4,4 +4,8 @@ __pycache__
 env_mis_perris
 db.sqlite3
 /static
+/api
+/apps
+/media
+/env_mis_perris
 .DS_Store
