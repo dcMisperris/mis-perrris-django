@@ -3,9 +3,17 @@ from .models import Mascota
 from django.http import JsonResponse
 
 
-def home(request):
-    return render(request,'adopcion/test.html')
 
+# Create your views here.
+def test(request):
+    context = {
+        'mail' : 'some title here',
+        'passwd' : 'password count'
+    }
+    return JsonResponse(context)
+
+def home(request):
+    return render(request,'adopcion/test.html',{})    
 def index(request):
     return render(request,'adopcion/index.html',{})
 
@@ -37,4 +45,4 @@ def mascotas_pastores(request):
     contexto = {'mascotas':mascota}
     return render(request,'adopcion/pastores.html',contexto)
 
-
+    ## rest_framework

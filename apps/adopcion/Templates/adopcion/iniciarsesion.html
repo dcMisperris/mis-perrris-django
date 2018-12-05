@@ -1,5 +1,3 @@
-{% load static %}
-{% load socialaccount %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +7,9 @@
 
 
     <title> Registro</title>
-		
-	<link rel="stylesheet" href="{% static "adopcion/fonts/style.css" %}">
+		{% load static %}
+		{% load socialaccount %}
+		<link rel="stylesheet" href="{% static "adopcion/fonts/style.css" %}">
     <link rel="stylesheet" href="{% static "adopcion/css/flexboxgrid.css" %}">
 
     <link rel="stylesheet" href="{% static "adopcion/css/estilo.css" %}">
@@ -82,7 +81,7 @@
 
 	            <br>
 	            <br>
-	            <p>¿No esta registrado?<a href="/../registro"> Crear Cuenta</a></p>
+	            <p>¿No esta registrado?<a href="registrarse.html"> Crear Cuenta</a></p>
 	            
 
 

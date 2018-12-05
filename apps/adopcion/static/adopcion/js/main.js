@@ -1,14 +1,13 @@
-$('.apireq').click( function(){
 
-  $.ajax({
-            url : "http://localhost:8000/api/persona/",
-            dataType: "json",
-            success: function(data){
-                    $('#id').text( data[1].id);
-                    $('#nombre').text( data[0].nombre);
-                    $('#rut').text( data[0].rut);
-                    $('#mail').text( data[0].mail);
-                    $('#passwd').text( data[0].passwd);
-                    $('#img_persona').text( data[0].img_persona);
-            } });
-});
+$('.apireq').click( function() {
+    $.ajax({
+             url : "http://localhost:8000/studentsapi",
+             dataType: "json",
+             success : function (data) {
+                      $('#first_name').text( data[0].first_name);
+                      $('#last_name').text( data[0].last_name);
+                      $('#age').text( data[0].age);
+                      $('#gender').text( data[0].gender);
+                    }
+                 });
+             });

@@ -1,22 +1,24 @@
 from django.db import models
 from django.dispatch import receiver
 from allauth.account.signals import user_signed_up
+
 # Create your models here.
 
 class Persona(models.Model):
-    nombre = models.CharField(max_length=30, null=False)
-    rut = models.CharField(max_length=9, null=False)
-    mail = models.EmailField(max_length=100, blank=False)
-    passwd = models.CharField(max_length=40, blank=False)
-    img_persona = models.ImageField(default='default.jpg', blank=True)
-
+    nombre = models.CharField(max_length = 30, null = 'false')
+    rut = models.CharField(max_length = 9, null = 'false')
+    mail = models.EmailField(null = 'false')
+    passwd = models.CharField(max_length = 40, null = 'false')
+    img_persona = models.ImageField(default='default.jpg',blank= True)
     def __str__(self):
         return self.nombre
-    @receiver(user_signed_up)
+
     def create_user_profile(request, user, **kwargs):
-        profile = Persona.objects.create(user=user)
+        profile = Profile.objects.create(user=user)
         profile.save()
        
+ 
+
 class Mascota(models.Model):
     OPCIONES_ESTADO = (('Rescatado','Rescatado'),('Disponible','Disponible'),('Adoptado','Adoptado'),)
     fotografia = models.ImageField(default='default.jpg',blank = True)
