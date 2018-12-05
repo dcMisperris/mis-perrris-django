@@ -25,7 +25,7 @@ SECRET_KEY = '7o2eyaae$d3(ztn^dl2+ng8j2wjrkwrpmyc8mwsn@-9j3bu+9i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','https://127.0.0.1']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -37,11 +37,52 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    #'django_extensions',
+    #'social_django',
+    #'socialaccount',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+
     'apps.adopcion',
     'rest_framework',
 
 
 ]
+
+SITE_ID = 1
+
+SOCIAL_AUTH_FACEBOOK_KEY = 'key'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'key'
+
+ACCOUNT_EMAIL_VERIFICATION = "none"
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'verified',
+            'locale',
+            'timezone',
+            'link',
+            'gender',
+            'updated_time',
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v2.12',
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,6 +111,11 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTIFICATION_BACKENDS= {
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticatBackend',
+}
 
 WSGI_APPLICATION = 'mis_perris.wsgi.application'
 
@@ -136,8 +182,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
-    #'DEFAUL_PERMISSION_CLASSES' : ('rest_framework.permissions.IsAuthenticated',),
-    #'DEFAUL_AUTHENTICATION_CLASSES': ('rest_framework_simplejwt.authentication.JWTAuthentication',),
+    'DEFAUL_PERMISSION_CLASSES' : ('rest_framework.permissions.IsAuthenticated',),
+    'DEFAUL_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication',),
 }
 
 

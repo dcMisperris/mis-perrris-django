@@ -8,6 +8,7 @@
 
     <title> Registro</title>
 		{% load static %}
+		{% load socialaccount %}
 		<link rel="stylesheet" href="{% static "adopcion/fonts/style.css" %}">
     <link rel="stylesheet" href="{% static "adopcion/css/flexboxgrid.css" %}">
 
@@ -60,25 +61,33 @@
 
 	            <form id="registro" action="" method="POST">
 	                <label class="diseñolabel" for="correo">Correo:</label>
-	                <input type="email" id="correo" class="diseños" name="correo" placeholder="ej: Ejemplo@alumnos.duoc.cl" required>
+	                <input type="email" id="Correo" class="diseños" name="correo" placeholder="ej: Ejemplo@alumnos.duoc.cl" required>
 	                <br>
 	                <br>
 	                <label class="diseñolabel" for="password">Contraseña:</label>
-	                <input type="password" class="password" placeholder="Contraseña" class="diseños" required>
+	                <input type="password" name="password" placeholder="Contraseña" class="diseños" required>
 	                <br>
 	                <br>
 
 
-	                <button type="submit" class= "btn_iniciar">Iniciar Sesion</button>
+	                <button type="submit" name="submit">Iniciar Sesion</button>
+	                <br>
 	            </form>
+
+   
+    <a class="btn_facebook" href="{% provider_login_url "facebook" method="oauth2" %}">
+    <span class="fab fa-facebook"></span>
+    <img src="https://zaqui.cl/static/img/facebook-icon.png"></a>  
+
 	            <br>
 	            <br>
-	            <p>¿No esta registrado?<a href="/registro"> Crear Cuenta</a></p>
+	            <p>¿No esta registrado?<a href="registrarse.html"> Crear Cuenta</a></p>
+	            
+
 
 	        </div>
-
 	    </div>
-		<script type="text/javascript" src="{% static 'adopcion/js/main.js' %}"></script>
+
 	       <aside class="row fondosect">
 	            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	                <ul class="row center-xs start-md contacto">

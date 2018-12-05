@@ -29,12 +29,13 @@ urlpatterns = [
     path('sesion/',include('apps.adopcion.urls')),
     path('pitbulls/',include('apps.adopcion.urls')),
     path('pastores/',include('apps.adopcion.urls')),
-    path('', include('apps.adopcion.urls')),
+    #path('', include('apps.adopcion.urls')),
     url(r'^api/persona/',PersonaAPIView.as_view()),
     url(r'^api/mascota/',MascotaAPIView.as_view()),
     #path('test/',include('apps.adopcion.urls')),
     #url(r'^lista_persona/',persona_list),
     url(r'^home/',home),
+    path('accounts/', include('allauth.urls'))
 
 
 
